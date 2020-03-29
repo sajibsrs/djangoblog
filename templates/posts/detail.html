@@ -23,7 +23,7 @@
                         <small class="text-muted">on {{ post.created_on }}</small>
                     </p>
                     <p class="mb-1">{{ post.content }}</p>
-                    <p><a href="#">Show post</a></p>
+                    <p><a href="{% url 'posts.index' %}">All posts</a></p>
                 </div>
             </div>
         </div>
