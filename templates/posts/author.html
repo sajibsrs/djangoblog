@@ -1,4 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-    Post author
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="h2">All posts by {{ author.get_full_name }}</h1>
+            <hr class="mb-4">
+        </div>
+    </div>
+    <div class="row">
+        {% for post in author_posts %}
+        <div class="col-6">
+            <div class="media">
+                <svg class="rounded-circle mr-3" width="75" height="75" xmlns="http://www.w3.org/2000/svg"
+                     preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                     aria-label="Completely round image: 75x75">
+                    <title>{{ post.title }}</title>
+                    <rect width="100%" height="100%" fill="#868e96"></rect>
+                </svg>
+                <div class="media-body">
+                    <h4 class="mt-0 mb-2">{{ post.title }}</h4>
+                    <p class="mb-2">by <a href="#">{{ post.author }}</a>
+                        <small class="text-muted">on {{ post.created_on }}</small>
+                    </p>
+                    <p class="mb-1">{{ post.content|slice:':250' }}</p>
+                    <p><a href="{% url 'posts.detail' pk=post.id %}">Show post</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}

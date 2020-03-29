@@ -20,7 +20,7 @@
                 </svg>
                 <div class="media-body">
                     <h4 class="mt-0 mb-2">{{ post.title }}</h4>
-                    <p class="mb-2">by <a href="#">{{ post.author }}</a>
+                    <p class="mb-2">by <a href="{% url 'author.posts' author_id=post.author.id %}">{{ post.author }}</a>
                         <small class="text-muted">on {{ post.created_on }}</small>
                     </p>
                     <p class="mb-1">{{ post.content|slice:':250' }}</p>
