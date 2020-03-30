@@ -19,8 +19,8 @@
                 </svg>
                 <div class="media-body">
                     <h2 class="mt-0 mb-2">{{ post.title }}</h2>
-                    <p class="mb-2">by <a href="#">{{ post.author }}</a>
-                        <small class="text-muted">on {{ post.created_on }}</small>
+                    <p class="mb-2">by <a href="{% url 'author.posts' author_id=post.author_id %}">{{ post.author }}</a>
+                        <small class="text-muted">on {{ post.created_on|date:'d-M-Y' }}</small>
                     </p>
                     <p class="mb-1">{{ post.content }}</p>
                     <p><a href="{% url 'posts.index' %}">All posts</a></p>
