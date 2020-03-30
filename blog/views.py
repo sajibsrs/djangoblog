@@ -26,3 +26,8 @@ class AuthorPosts(generic.ListView):
 
     template_name = 'posts/author.html'
 
+
+class Authors(generic.DetailView):
+    model = User
+    template_name = 'authors/detail.html'
+
