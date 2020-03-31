@@ -29,10 +29,12 @@ class AuthorPosts(generic.ListView):
 
 class AuthorList(generic.ListView):
     model = User
+    context_object_name = 'author_list'
     template_name = 'authors/index.html'
 
 
 class AuthorDetail(generic.DetailView):
     model = User
+    context_object_name = 'author'
     template_name = 'authors/detail.html'
 

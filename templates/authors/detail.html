@@ -17,15 +17,15 @@
                         <rect width="100%" height="100%" fill="#868e96"></rect>
                     </svg>
                     <div class="media-body">
-                        <h5 class="mb-4">{{ user.get_full_name }}</h5>
+                        <h5 class="mb-4">{{ author.get_full_name }}</h5>
                         <ul class="list-group">
-                            <li class="list-group-item"><strong>First name: </strong>{{ user.first_name }}</li>
-                            <li class="list-group-item"><strong>Last name: </strong>{{ user.last_name}}</li>
-                            <li class="list-group-item"><strong>Email: </strong>{{ user.email }}</li>
-                            <li class="list-group-item"><strong>Account created: </strong>{{ user.date_joined|date:'d-M-Y' }}</li>
+                            <li class="list-group-item"><strong>First name: </strong>{{ author.first_name }}</li>
+                            <li class="list-group-item"><strong>Last name: </strong>{{ author.last_name}}</li>
+                            <li class="list-group-item"><strong>Email: </strong>{{ author.email }}</li>
+                            <li class="list-group-item"><strong>Account created: </strong>{{ author.date_joined|date:'d-M-Y' }}</li>
                         </ul>
                         <br>
-                        <p>All posts by <a href="{% url 'author-posts' author_id=user.id %}">{{ user.get_full_name }}</a></p>
+                        <p>All posts by <a href="{% url 'author-posts' author_id=author.id %}">{{ author.get_full_name }}</a></p>
                     </div>
                 </div>
             </div>

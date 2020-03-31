@@ -9,22 +9,22 @@
         </div>
     </div>
     <div class="row">
-        {% for user in user_list %}
+        {% for author in author_list %}
         <div class="col-6">
             <div class="media">
                 <svg class="rounded-circle mr-3" width="75" height="75" xmlns="http://www.w3.org/2000/svg"
                      preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
                      aria-label="Completely round image: 75x75">
-                    <title>{{ user.get_full_name}}</title>
+                    <title>{{ author.get_full_name}}</title>
                     <rect width="100%" height="100%" fill="#868e96"></rect>
                 </svg>
                 <div class="media-body">
-                    <h4 class="mt-0 mb-2">{{ user.get_full_name }}</h4>
+                    <h4 class="mt-0 mb-2">{{ author.get_full_name }}</h4>
                     <p class="mb-2">
-                        <small class="text-muted">Joined on {{ user.date_joined|date:'d-M-Y' }}</small>
+                        <small class="text-muted">Joined on {{ author.date_joined|date:'d-M-Y' }}</small>
                     </p>
-                    <p class="mb-2">{{ user.email }}</p>
-                    <p><a href="{% url 'author-detail' pk=user.id %}">Show author</a></p>
+                    <p class="mb-2">{{ author.email }}</p>
+                    <p><a href="{% url 'author-detail' pk=author.id %}">Show author</a></p>
                 </div>
             </div>
         </div>
