@@ -23,7 +23,7 @@
                     <p class="mb-2">by <a href="{% url 'author-posts' author_id=post.author_id %}">{{ post.author }}</a>
                         <small class="text-muted">on {{ post.created_on|date:'d-M-Y' }}</small>
                     </p>
-                    <p class="mb-4">{{ post.content|truncatewords:50 }}</p>
+                    <p class="mb-3">{{ post.content|truncatewords:50 }}</p>
                     <p><a href="{% url 'posts-detail' pk=post.id %}" class="btn btn-primary">Show post</a></p>
                 </div>
             </div>

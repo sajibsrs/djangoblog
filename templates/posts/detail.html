@@ -22,8 +22,8 @@
                     <p class="mb-2">by <a href="{% url 'author-posts' author_id=post.author_id %}">{{ post.author }}</a>
                         <small class="text-muted">on {{ post.created_on|date:'d-M-Y' }}</small>
                     </p>
-                    <p class="mb-2">{{ post.content }}</p>
-                    <p><a href="{% url 'posts-index' %}">All posts</a></p>
+                    <p class="mb-3">{{ post.content }}</p>
+                    <p><a href="{% url 'posts-index' %}" class="btn btn-primary">All posts</a></p>
                 </div>
             </div>
         </div>
