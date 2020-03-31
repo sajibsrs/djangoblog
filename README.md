@@ -4,8 +4,9 @@ Part of the challenge of creating same application with same features in **larav
 
 ## Features
 * Authentication
-* TODO: User profile
-* Posts
+* Author
+* Post
+* TODO: Post crud
 * Post by user
 * TODO: Rich text editor for post
 * TODO: Post image and user profile picture
