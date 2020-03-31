@@ -23,8 +23,8 @@
                     <p class="mb-2">
                         <small class="text-muted">Joined on {{ author.date_joined|date:'d-M-Y' }}</small>
                     </p>
-                    <p class="mb-2">{{ author.email }}</p>
-                    <p><a href="{% url 'author-detail' pk=author.id %}">Show author</a></p>
+                    <p class="mb-3">{{ author.email }}</p>
+                    <p><a href="{% url 'author-detail' pk=author.id %}" class="btn btn-primary">Show author</a></p>
                 </div>
             </div>
         </div>
