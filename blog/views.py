@@ -37,4 +37,3 @@ class AuthorDetail(generic.DetailView):
     model = User
     context_object_name = 'author'
     template_name = 'authors/detail.html'
-
